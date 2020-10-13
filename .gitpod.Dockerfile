@@ -1,3 +1,4 @@
+#FROM gitpod/workspace-full-vnc
 FROM golang:1.12
 
 # install pyenv
@@ -58,3 +59,9 @@ RUN ./build.sh test
 RUN go/build.sh test
 RUN python/build.sh test
 RUN ruby/build.sh test
+
+# Install custom tools, runtimes, etc.
+# For example "bastet", a command-line tetris clone:
+#RUN brew install bastet
+#
+# More information: https://www.gitpod.io/docs/config-docker/
